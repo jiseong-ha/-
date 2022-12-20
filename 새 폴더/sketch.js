@@ -11,31 +11,21 @@ function setup() {
 
 function draw() {
   P.update ();
-  P.display ();
+
 }
 
-class Play {
-  
-  constructor(){  this.xpos1 = 200 + 200 * cos(angle1);
-   this.ypos1 = 200 + 200 * sin(angle1);
-  this. xpos2 = 200 + 200 * cos(angle2);
-   this.ypos2 = 200 + 200 * sin(angle2); 
-  
-  }
+function Play() {
  
- update(){  
-
-   this.angle1 = random(0, 6 * PI);  
-     this. angle2 = random(0, 6 * PI); 
- 
-    }
-
- 
- 
-display(){ 
   stroke(0, 0, 0, 15);
-line(xpos1, ypos1, xpos2, ypos2);
-}
 
+ this. update = function(){
+  let angle1 = random(0, 6 * PI); 
+   let xpos1 = 200 + 200 * cos(angle1);
+   let ypos1 = 200 + 200 * sin(angle1);
+  let angle2 = random(0, 6 * PI);
+    let xpos2 = 200 + 200 * cos(angle2);
+   let ypos2 = 200 + 200 * sin(angle2); 
   
+line(xpos1, ypos1, xpos2, ypos2); 
+ }
 }
