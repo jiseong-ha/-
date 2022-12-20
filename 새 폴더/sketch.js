@@ -29,3 +29,7 @@ function Play() {
 line(xpos1, ypos1, xpos2, ypos2); 
  }
 }
+
+function mousePressed() {
+  background (0);
+}
