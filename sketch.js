@@ -19,7 +19,7 @@ function draw() {
   strokeWeight(1);
   line(width/2, height/2, mouseX, mouseY);
   } else {
-  	line(x+w, y, x, y+w);
+  	line(mouseX, mouseY, x, y+w);
   }
   
   x = x + w;
