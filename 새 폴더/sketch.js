@@ -1,4 +1,4 @@
- 
+
 
 function setup() {
   createCanvas(400, 400);
@@ -9,9 +9,9 @@ function setup() {
 
 function draw() {
 for (let i = 0; i < 100; i++) {
-  let r = random(50); 
+  let r = random();
   let x = random(width);
-  let y= random(height);
+  let y= random(height); 
   stroke(r * 5);
   line(x, y, i, i+r);
 }
