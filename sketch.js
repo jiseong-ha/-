@@ -18,6 +18,6 @@ function draw() {
   }
   
 function keyReleased() {
-  if (keyCode == DELETE) background(255);
+  if (keyCode == DELETE) background(0);
  
 }
