@@ -1,38 +1,25 @@
-let ball1, ball2;
+
 
 function setup() {
-  createCanvas(500, 400);
-  ball1 = new Ball();
-  ball2 = new Ball();
+  createCanvas(400, 400);
+  background(255, 255, 255);
+  stroke(0, 0, 0, 15);
 }
 
 function draw() {
-  background(0,5);
-  ball1.draw();
-  ball2.draw();
-  ball1.move();
-  ball2.move();
-  for (let i = 0; i < width; i++) {
-    let r = random(255);
-    stroke(r);
-    line(i, r, random(r), random(i));
-  }
+
+  randomChord();
+  randomChord();
 }
 
-class Ball{
-  constructor(){
-    this.x = random(width);
-    this.y = random(height, height*2);
-    this.d = random(5, 30);
-  }
+function randomChord() {
+  let angle1 = random(0, 6 * PI);
+  let xpos1 = 200 + 200 * cos(angle1);
+  let ypos1 = 200 + 200 * sin(angle1);
+ 
+  let angle2 = random(0, 6 * PI);
+  let xpos2 = 200 + 200 * cos(angle2);
+  let ypos2 = 200 + 200 * sin(angle2);
 
-  draw(){
-    fill(255);
-    circle(this.x, this.y, this.d);
-  }
-
-  move(){
-    this.x = this.x + random(-5, 5);
-  	this.y = this.y + random(-5, 5);
-  }
+  line(xpos1, ypos1, xpos2, ypos2);
 }
