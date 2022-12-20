@@ -27,11 +27,7 @@ class Ball{
   }
 
   move(){
-    this.x += random(-2, 2);
-    this.y -= 2;
-    if (this.y < 0) {
-      this.x = random(width);
-      this.y = random(height, height * 2);
-    }
+    this.x = this.x + random(-5, 5);
+  	this.y = this.y + random(-5, 5);
   }
 }
