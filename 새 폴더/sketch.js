@@ -3,14 +3,23 @@ let P;
 
 function setup() {
  createCanvas(400, 400);
- background(255, 255, 255);
+background(255, 255, 255);
  P = new Play();
  
   
 }
 
 function draw() {
-  P.update ();
+  
+  if (mouseIsPressed === true) {fill(0);
+    rect (0,0,400,400);
+    
+  }
+  else {
+    P.update ();
+  
+  }
+
 
 }
 
@@ -28,8 +37,4 @@ function Play() {
   
 line(xpos1, ypos1, xpos2, ypos2); 
  }
-}
-
-function mousePressed() {
-  background (0);
 }
