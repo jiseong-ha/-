@@ -7,7 +7,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(0,5);
   ball1.draw();
   ball2.draw();
   ball1.move();
