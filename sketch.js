@@ -9,7 +9,7 @@ function setup() {
 function draw() {
   
   if (random() > p) {
-  	  point(random(500), random(400));
+  	  point(random(900), random(800));
   } else {
   	stroke(random(255), random(255), random(255));
   strokeWeight(1);
