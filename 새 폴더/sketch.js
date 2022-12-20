@@ -12,6 +12,11 @@ function draw() {
   ball2.draw();
   ball1.move();
   ball2.move();
+  for (let i = 0; i < width; i++) {
+    let r = random(255);
+    stroke(r);
+    line(i, r, random(r), random(i));
+  }
 }
 
 class Ball{
