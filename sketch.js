@@ -1,7 +1,7 @@
 let p = 0.5;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
   background(0);
   stroke(200);
 }
