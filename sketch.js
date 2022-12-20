@@ -1,32 +1,37 @@
-let P;
 
+let x, y;
+x = 0;
+y = 0;
+
+let w = 20;
+let p = 0.5;
 
 function setup() {
- createCanvas(400, 400);
- background(255, 255, 255);
- P = new Play();
- 
-  
+  createCanvas(400, 400);
+  background(0);
+  stroke(200);
 }
 
 function draw() {
-  P.update ();
-
-}
-
-function Play() {
- 
- this. update = function(){
-if (mouseIsPressed === true) {stroke(0, 0, 0, 15);
-  let angle1 = random(0, 6 * PI); 
-   let xpos1 = 200 + 200 * cos(angle1);
-   let ypos1 = 200 + 200 * sin(angle1);
-  let angle2 = random(0, 6 * PI);
-    let xpos2 = 200 + 200 * cos(angle2);
-   let ypos2 = 200 + 200 * sin(angle2); 
-line(xpos1, ypos1, xpos2, ypos2); }
   
-  else{ background (0);}
+  if (random() > p) {
+    stroke(random(255), random(255), random(255));
+  strokeWeight(1);
+  line(width/2, height/2, mouseX, mouseY);
+  } else {
+  	line(x+w, y, x, y+w);
+  }
   
- }
+  x = x + w;
+  
+  if (x > width) {
+    y = y + w;
+    x = 0;
+  }
+  
+  if (y > height) {
+    background(0);
+    x = 0;
+    y = 0;
+  }
 }
